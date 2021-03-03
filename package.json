@@ -3,10 +3,19 @@
   "version": "1.0.0",
   "main": "./src/main.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./src/main.js",
+    "start": "node ./src/main.js"
+  },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-form-data": "^2.0.14",
+    "file-type": "^16.2.0",
+    "image-size": "^0.9.4",
+    "sharp": "^0.27.2"
   },
   "devDependencies": {
+    "nodemon": "^2.0.7",
     "prettier": "^2.2.1"
   }
 }
