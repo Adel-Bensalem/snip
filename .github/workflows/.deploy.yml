@@ -17,4 +17,4 @@ jobs:
           git clone https://github.com/Adel-Bensalem/snip.git
           cd snip
           npm install
-          export PORT=80 && npm run start
+          export PORT=80 && sudo npm run start
