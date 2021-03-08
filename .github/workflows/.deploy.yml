@@ -11,4 +11,10 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.DEPLOY_KEY }}
-        script: whoami
+        script: |
+          mkdir -p ~/workspace/ # create a new folder
+          cd ~/workspace/ # navigate into the folder
+          git clone git@github.com:Adel-Bensalem/snip.git
+          cd snip
+          npm install
+          export PORT=80 && npm run start
