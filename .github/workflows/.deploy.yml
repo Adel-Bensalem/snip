@@ -16,5 +16,5 @@ jobs:
           git clone https://github.com/Adel-Bensalem/snip.git
           cd snip
           npm install
-          npx kill-port ${{ secrets.PORT }}
+          sudo npx kill-port ${{ secrets.PORT }}
           export PORT=${{ secrets.PORT }} && sudo -E npm run start
