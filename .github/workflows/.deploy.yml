@@ -9,7 +9,6 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        port: ${{ secrets.PORT }}
         key: ${{ secrets.DEPLOY_KEY }}
         script: |
           mkdir -p ~/workspace/ # create a new folder
@@ -17,4 +16,5 @@ jobs:
           git clone https://github.com/Adel-Bensalem/snip.git
           cd snip
           npm install
-          export PORT=80 && sudo -E npm run start
+          npx kill-port ${{ secrets.PORT }}
+          export PORT=${{ secrets.PORT }} && sudo -E npm run start
