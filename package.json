@@ -8,6 +8,7 @@
     "start": "node ./src/main.js"
   },
   "dependencies": {
+    "dd-trace": "^0.31.1",
     "express": "^4.17.1",
     "express-form-data": "^2.0.14",
     "file-type": "^16.2.0",

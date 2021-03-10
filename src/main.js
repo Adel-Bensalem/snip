@@ -1,3 +1,4 @@
+require("dd-trace").init();
 const { createCore } = require("./core/main");
 const { getFileType } = require("./libs/getFileType");
 const { getImageDimensions } = require("./libs/getImageDimensions");
